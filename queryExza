@@ -1,0 +1,65 @@
+CREATE TABLE login (user VARCHAR(20) NOT NULL,password VARCHAR(20) NOT NULL);
+
+
+INSERT INTO login values("login","password");
+
+
+
+CREATE TABLE prod_list (serial_id int(11) NOT NULL AUTO_INCREMENT,item varchar(45) NOT NULL,product_id varchar(45) NOT NULL,   product_name varchar(150) NOT NULL,   price varchar(45) NOT NULL,   quantity int(11) NOT NULL,hsn_code varchar(45) NOT NULL,   PRIMARY KEY (`serial_id`) ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE customer (customer_id int(12) NOT NULL ,customer varchar(45) NOT NULL,customer_type varchar(45) NOT NULL,customer_name varchar(45) NOT NULL,invoice_date varchar(45) NOT NULL,street varchar(45) NOT NULL,   postal_code varchar(45) NOT NULL,country_id varchar(45) NOT NULL,phone varchar(45) NOT NULL,email varchar(45) NOT NULL, pan_no varchar(45) NOT NULL,gst_no varchar(45) NOT NULL,  PRIMARY KEY (`customer_id`) ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE invoice (invoice int(12) NOT NULL AUTO_INCREMENT,invoice_date varchar(45) NOT NULL,customer_id int(12) NOT NULL,PRIMARY KEY (`invoice`))  AUTO_INCREMENT=2018100 ;
+
+
+
+CREATE TABLE save_table(save_id int(11) NOT NULL AUTO_INCREMENT,invoice int(11) NOT NULL ,serial_id int(11) NOT NULL ,item varchar(45) NOT NULL,product_id varchar(45) NOT NULL, product_name varchar(45) NOT NULL,   price varchar(45) NOT NULL,   quantity int(11) NOT NULL,hsn_code varchar(45) NOT NULL,customer_id int(12) NOT NULL,customer varchar(45) NOT NULL,customer_type varchar(45) NOT NULL,customer_name varchar(45) NOT NULL,invoice_date varchar(45) NOT NULL,currency varchar(45) NOT NULL,cur_value varchar(45) NOT NULL,street varchar(45) NOT NULL,   postal_code varchar(45) NOT NULL,country_id varchar(45) NOT NULL,phone varchar(45) NOT NULL,email varchar(45) NOT NULL, pan_no varchar(45) NOT NULL,gst_no varchar(45) NOT NULL,tax_name varchar(45) NOT NULL,tax_value varchar(45) NOT NULL,discount varchar(45) NOT NULL, PRIMARY KEY (`save_id`) ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE cc_customer (customer_id int(12) NOT NULL AUTO_INCREMENT,customer varchar(45) NOT NULL,customer_type varchar(45) NOT NULL,customer_name varchar(45) NOT NULL,street varchar(45) NOT NULL, postal_code varchar(45) NOT NULL,country_id varchar(45) NOT NULL,phone varchar(45) NOT NULL,mobile varchar(45) NOT NULL,email varchar(45) NOT NULL, pan_no varchar(45) NOT NULL,gst_no varchar(45) NOT NULL,  PRIMARY KEY (`customer_id`) ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE cp_product (  pro_id int(11) NOT NULL AUTO_INCREMENT,item varchar(45) NOT NULL,product_id varchar(45) NOT NULL,   product_name varchar(150) NOT NULL,   price varchar(45) NOT NULL,   PRIMARY KEY (`pro_id`) ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE tax (tax_key int(11) NOT NULL AUTO_INCREMENT ,tax_name varchar(45) NOT NULL ,tax_value varchar(45) NOT NULL,PRIMARY KEY (`tax_key`) );
+
+
+
+
+
+
+   <table> 
+    <form action="saveCustomer" method="post"> 
+    
+<tr><td>Customer</td><td><input type="text" name="customer" required/></td></tr>
+<tr><td>Customer Type</td><td><input type="text" name="customer_type" required/></td></tr>
+<tr><td>Customer Name</td><td><input type="text" name="customer_name" required/></td></tr>
+<tr><td>Date of Invoice Entry:</td><td><input type="date" name="invoice_date" required/></td></tr>
+<tr><td>Choose Currency</td><td> <select name="currency">
+                        <option value="inr" >INR</option>
+                        <option value="usd" >USD</option>
+        </select><br></td></tr>
+<tr><td>Street:</td><td><input type="text" name="street" required/></td></tr>  
+<tr><td>Postal code:</td><td><input type="text" name="postal_code" required/></td></tr>  
+<tr><td>Country ID:</td><td><input type="text" name="country_id" required/></td></tr>
+<tr><td>Phone:</td><td><input type="tel" name="phone" placeholder="123-456-7890" required/></td></tr>  
+ <tr><td>Email:</td><td><input type="email" name="email" placeholder="abc@xyz.com" required/></td></tr>    
+ <tr><td>PAN no:</td><td><input type="text" name="pan_no" required/></td></tr>  
+<tr><td>GST no:</td><td><input type="text" name="gst_no" required/></td></tr>
+ 
+<tr><td colspan="2"><input type="submit" value="Save Customer"/></td></tr>  
+</table>  
+</form>
+
+
+
+
+
+
+ 
+
+
+
