@@ -3,7 +3,7 @@ This project deals with the generation of gst invoice billing
 This is a Java web Application using servlets,JSP
 
 
-TECHNOLOGIES USED:
+# TECHNOLOGIES USED:
 
 
 JAVA:Servlets,JSP
@@ -18,7 +18,7 @@ small includes:JSTL,Java Script
 
 
 
-DESCRIPTION:
+# DESCRIPTION:
 
 
 The user can login and create customers,products and tax.
@@ -31,7 +31,7 @@ After clicking on the final submission the invoice id is generated.
 After that the user can review and print the invoice.
 
 
-Info:
+# Info:
 
 You will find the web pages(JSP pages) in web folder.
 You can find servlet pages in java folder.
@@ -40,4 +40,4 @@ Mysql queries used for the project is in queryExza folder.
 
 
 
-Thankyou:+1:
+# Thankyou:+1:
