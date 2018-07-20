@@ -40,4 +40,4 @@ Mysql queries used for the project is in queryExza folder.
 
 
 
-Thankyou.
+Thankyou:+1:
